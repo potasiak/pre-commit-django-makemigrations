@@ -1,0 +1,16 @@
+- id: django-makemigrations-check
+  name: Check Django migrations
+  entry: python manage.py makemigrations --check
+  language: system
+  always_run: true
+  pass_filenames: false
+  require_serial: true
+
+- id: django-makemigrations-dry-run
+  name: Dry-run Django migrations
+  entry: python manage.py makemigrations --dry-run
+  language: system
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  require_serial: true
